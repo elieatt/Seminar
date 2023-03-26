@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import './widgets.dart';
+import 'page_content.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -58,22 +58,25 @@ class OnboardingScreenState extends State<OnboardingScreen> {
                   children: const [
                     ScreenContent(
                       color: Colors.white,
-                      subtitle: "ewsdasdasdsadasdasdad",
-                      title: "dasd",
+                      subtitle:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+                      title: "learn anytime, anywhere",
                       urlImage: "assets/first.png",
                       lastScreen: false,
                     ),
                     ScreenContent(
                       color: Colors.white,
-                      subtitle: "ewsdasdasdsadasdasdad",
-                      title: "dasd",
+                      subtitle:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+                      title: "Easy and Quick",
                       urlImage: "assets/second.png",
                       lastScreen: false,
                     ),
                     ScreenContent(
                       color: Colors.white,
-                      subtitle: "ewsdasdasdsadasdasdad",
-                      title: "dasd",
+                      subtitle:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+                      title: "Dont miss a single lecture",
                       urlImage: "assets/third.png",
                       lastScreen: true,
                     )

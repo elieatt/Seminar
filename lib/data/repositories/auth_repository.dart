@@ -9,4 +9,10 @@ class AuthRepository {
     }
     return true;
   }
+
+  static Future<void> tutorialPassed() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool("firstStart", false);
+    return;
+  }
 }

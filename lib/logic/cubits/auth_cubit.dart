@@ -2,7 +2,9 @@ import 'package:bloc/bloc.dart';
 import 'package:seminar/data/repositories/auth_repository.dart';
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit() : super(AuthInit());
+  AuthCubit() : super(AuthInit()) {
+    startUpAuth();
+  }
 
   Future<void> startUpAuth() async {
     emit(AuthProgress());
@@ -12,6 +14,17 @@ class AuthCubit extends Cubit<AuthState> {
       return;
     }
     emit(AuthNoToken());
+  }
+
+  Future<void> tutroialPassed() async {
+    await AuthRepository.tutorialPassed();
+    emit(AuthNoToken());
+  }
+
+  @override
+  void onChange(Change<AuthState> change) {
+    print(change.toString() + "chaaanged");
+    super.onChange(change);
   }
 }
 

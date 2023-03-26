@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:seminar/logic/cubits/auth_cubit.dart';
 
 class ScreenContent extends StatelessWidget {
   const ScreenContent(
@@ -15,9 +16,7 @@ class ScreenContent extends StatelessWidget {
   final String subtitle;
   final bool lastScreen;
   void getStarted(BuildContext context) async {
-    SharedPreferences shi = await SharedPreferences.getInstance();
-    await shi.setBool("firstStart", false);
-    Navigator.pushReplacementNamed(context, "/home");
+    await BlocProvider.of<AuthCubit>(context).tutroialPassed();
   }
 
   @override
@@ -25,7 +24,7 @@ class ScreenContent extends StatelessWidget {
     return Container(
       color: Colors.transparent,
       child: Padding(
-        padding: const EdgeInsets.only(top: 120.0),
+        padding: const EdgeInsets.only(top: 60.0),
         child: SingleChildScrollView(
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.center,
